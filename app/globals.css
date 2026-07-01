@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════
+   STAP 1 — Jouw huisstijlkleuren
+   Vervang de waarden hieronder door jouw eigen hex-codes.
+   ══════════════════════════════════════════════════════════════ */
+
+@theme {
+  --color-primair:      #3b5633;   /* ← jouw hoofdkleur     */
+  --color-achtergrond:  #f8f5f0;   /* ← achtergrondkleur    */
+  --color-tekst:        #1a1a1a;   /* ← tekstkleur          */
+  --color-accent:       #d56119;   /* ← accentkleur         */
+  --color-wit:          #ffffff;
+
+  /* ── STAP 2 — Jouw lettertype ────────────────────────────── */
+  /* Optie A: Google Font
+     1. Ga naar fonts.google.com, zoek jouw font, kies "Get font" → "Get embed code"
+     2. Kopieer de @import-regel en plak hem hierboven
+     3. Pas de naam hieronder aan:
+  --font-hoofd: 'Lato', sans-serif;
+
+     Optie B: Eigen font (.otf / .ttf / .woff2)
+     1. Kopieer jouw fontbestand naar /public/fonts/
+     2. Voeg onderaan dit bestand een @font-face toe
+     3. Pas de naam hieronder aan:
+  --font-hoofd: 'JouwFont', serif;
+  */
+  --font-hoofd: Inter, system-ui, sans-serif;
+}
+
+/* ─── Basisstijlen ─────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-achtergrond);
+  color: var(--color-tekst);
+  font-family: var(--font-hoofd);
+  line-height: 1.75;
+}
+
+/* ─── Scroll-animaties ──────────────────────────────────────
+   Voeg className="reveal" toe aan een element om het te laten
+   infaden zodra het in beeld scrollt.
+   ─────────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-btn { animation: none; }
+}
+
+/* ─── Hero sectie ───────────────────────────────────────────
+   Gebruik: <div className="hero-section" style={{ backgroundImage: "url('/portret.jpg')" }}>
+   Als portret.jpg ontbreekt, valt hij terug op --color-primair.
+   ─────────────────────────────────────────────────────────── */
+.hero-section {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: var(--color-primair);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+}
+@media (max-width: 768px) {
+  .hero-section { height: 460px; background-attachment: scroll; }
+  .hero-overlay {
+    padding: 1.5rem;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  }
+}
+
+/* ─── Hero-knop (speels) ────────────────────────────────────── */
+@keyframes speels {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10%       { transform: rotate(-4deg) scale(1.05); }
+  20%       { transform: rotate(4deg) scale(1.05); }
+  30%       { transform: rotate(-3deg) scale(1.03); }
+  40%       { transform: rotate(3deg) scale(1.03); }
+  50%       { transform: rotate(0deg) scale(1); }
+}
+.hero-btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 2rem;
+  padding: 0.9rem 2.1rem;
+  background: var(--color-accent);
+  color: white;
+  font-family: var(--font-hoofd);
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  animation: speels 3s ease-in-out 1.5s infinite;
+}
+.hero-btn:hover { opacity: 0.85; }
+
+/* ─── Twee-kolom layout ─────────────────────────────────────
+   Gebruik: <div className="two-col"> of <div className="two-col flip">
+   flip: foto links, tekst rechts
+   ─────────────────────────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.two-col.flip .col-image { order: -1; }
+.col-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: block;
+}
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; gap: 1.75rem; }
+  .two-col.flip .col-image { order: 0; }
+  .col-image img { height: 260px; }
+}
