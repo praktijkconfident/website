@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: {
-    default: '[Jouw naam] · [Jouw tagline]',
-    template: '%s · [Jouw naam]',
+    default: 'Praktijk Confident · Rust, ruimte en vertrouwen',
+    template: '%s · Praktijk Confident',
   },
   description: '[Korte beschrijving van wat je doet en voor wie]',
 };

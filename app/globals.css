@@ -1,30 +1,12 @@
 @import "tailwindcss";
 
-/* ══════════════════════════════════════════════════════════════
-   STAP 1 — Jouw huisstijlkleuren
-   Vervang de waarden hieronder door jouw eigen hex-codes.
-   ══════════════════════════════════════════════════════════════ */
-
 @theme {
-  --color-primair:      #3b5633;   /* ← jouw hoofdkleur     */
-  --color-achtergrond:  #f8f5f0;   /* ← achtergrondkleur    */
-  --color-tekst:        #1a1a1a;   /* ← tekstkleur          */
-  --color-accent:       #d56119;   /* ← accentkleur         */
-  --color-wit:          #ffffff;
-
-  /* ── STAP 2 — Jouw lettertype ────────────────────────────── */
-  /* Optie A: Google Font
-     1. Ga naar fonts.google.com, zoek jouw font, kies "Get font" → "Get embed code"
-     2. Kopieer de @import-regel en plak hem hierboven
-     3. Pas de naam hieronder aan:
-  --font-hoofd: 'Lato', sans-serif;
-
-     Optie B: Eigen font (.otf / .ttf / .woff2)
-     1. Kopieer jouw fontbestand naar /public/fonts/
-     2. Voeg onderaan dit bestand een @font-face toe
-     3. Pas de naam hieronder aan:
-  --font-hoofd: 'JouwFont', serif;
-  */
+  --color-primair:     #3b5633;
+  --color-achtergrond: #f8f5f0;
+  --color-tekst:       #1a1a1a;
+  --color-accent:      #e8d5a3;
+  --color-wit:         #ffffff;
+  --color-titelkleur:  #e8d5a3;
   --font-hoofd: Inter, system-ui, sans-serif;
 }
 
@@ -96,6 +78,27 @@ body {
   }
 }
 
+/* ─── Tekst-ticker ───────────────────────────────────────────
+   Gebruik: <div className="ticker-wrap"><div className="ticker-track">…tekst… …tekst…</div></div>
+   Zet dezelfde tekst er twee keer in voor een naadloze loop.
+   ─────────────────────────────────────────────────────────── */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 32s linear infinite;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
 /* ─── Hero-knop (speels) ────────────────────────────────────── */
 @keyframes speels {
   0%, 100% { transform: rotate(0deg) scale(1); }
@@ -145,4 +148,12 @@ body {
   .two-col { grid-template-columns: 1fr; gap: 1.75rem; }
   .two-col.flip .col-image { order: 0; }
   .col-image img { height: 260px; }
+}
+
+/* Modifier voor portretfoto's (bijv. portret.jpg, 3:4) — toont de hele
+   foto op de juiste verhouding i.p.v. een vaste hoogte die kan bijsnijden. */
+.col-image.portret img {
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-position: center top;
 }
