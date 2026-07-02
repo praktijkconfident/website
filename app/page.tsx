@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: ['/fotos/hero.jpg'],
+  },
+};
 
 const tickerItems = [
   'Ik voel meer rust in mijn lichaam',
