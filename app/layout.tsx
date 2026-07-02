@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     default: 'Praktijk Confident · Rust, ruimte en vertrouwen',
     template: '%s · Praktijk Confident',
   },
-  description: '[Korte beschrijving van wat je doet en voor wie]',
+  description:
+    'Voor vrouwen die altijd doorgaan terwijl hun lichaam allang stop zegt. Begeleiding voor vrouwen die zich uitgeput, overprikkeld of zichzelf kwijt voelen, met NEI-therapie, essentiële oliën en ademcoaching.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
