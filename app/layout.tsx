@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.praktijkconfident.nl'),
   title: {
     default: 'Praktijk Confident · Rust, ruimte en vertrouwen',
     template: '%s · Praktijk Confident',
