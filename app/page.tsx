@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
+import Energiescan from '@/components/Energiescan';
+import NieuwsbriefForm from '@/components/NieuwsbriefForm';
 
 export const metadata: Metadata = {
   openGraph: {
@@ -128,6 +130,15 @@ export default function HomePage() {
           Je bent niet de enige. En je hoeft dit niet te pushen, te verklaren of op te lossen.
           Soms is het gewoon nodig om even stil te staan en te voelen wat er echt speelt.
         </p>
+      </section>
+
+      {/* Energiescan */}
+      <section className="border-t border-primair/10">
+        <div className="max-w-2xl mx-auto px-6 py-20">
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-primair/10 reveal">
+            <Energiescan />
+          </div>
+        </div>
       </section>
 
       {/* Hoe ik werk */}
@@ -260,6 +271,25 @@ export default function HomePage() {
                 &ldquo;{quote}&rdquo;
               </blockquote>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inschrijven inspiratiemails */}
+      <section className="bg-primair">
+        <div className="max-w-2xl mx-auto px-6 py-20 text-center">
+          <p className="uppercase tracking-wide text-sm font-bold text-titelkleur mb-2 reveal">
+            Inschrijven inspiratiemails
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-wit mb-4 reveal">
+            Blijf op de hoogte van rust, ruimte en inzicht
+          </h2>
+          <p className="text-wit/80 leading-relaxed mb-8 reveal">
+            Ontvang af en toe inspiratie, tips en zachte reminders om weer bij jezelf te komen,
+            rechtstreeks in je mailbox.
+          </p>
+          <div className="reveal">
+            <NieuwsbriefForm />
           </div>
         </div>
       </section>
