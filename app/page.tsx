@@ -6,7 +6,7 @@ import NieuwsbriefForm from '@/components/NieuwsbriefForm';
 export const metadata: Metadata = {
   title: 'NEI-therapie & NEI-therapeut Oisterwijk, Tilburg en omgeving',
   description:
-    'Praktijk Confident: NEI-therapeut in Oisterwijk, Tilburg en omgeving. Voor vrouwen die altijd doorgaan terwijl hun lichaam allang stop zegt. Begeleiding met NEI-therapie, essentiële oliën en ademcoaching.',
+    'NEI-therapeut in Oisterwijk en Tilburg. Begeleiding voor vrouwen die uitgeput of overprikkeld zijn, met NEI-therapie, essentiële oliën en ademcoaching.',
   openGraph: {
     images: ['/fotos/hero.jpg'],
   },

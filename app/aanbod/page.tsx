@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Aanbod',
   description:
-    'NEI-therapie en NEI-therapeut in Oisterwijk, Tilburg en omgeving. Bekijk de trajecten, cursussen en workshops van Praktijk Confident voor rust, ruimte en vertrouwen.',
+    'NEI-therapie en NEI-therapeut in Oisterwijk en Tilburg. Bekijk trajecten, cursussen en workshops van Praktijk Confident.',
 };
 
 const herkenbaar = [

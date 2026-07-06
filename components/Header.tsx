@@ -22,7 +22,7 @@ export default function Header() {
 
         {/* Logo / naam */}
         <Link href="/" className="flex items-center gap-2 font-bold text-primair text-lg" onClick={() => setOpen(false)}>
-          <img src="/fotos/logo.png" alt="" className="h-9 w-9 object-contain" />
+          <img src="/fotos/logo.png" alt="Praktijk Confident logo" className="h-9 w-9 object-contain" />
           Praktijk Confident
         </Link>
 

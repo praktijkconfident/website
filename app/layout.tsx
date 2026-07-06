@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s · Praktijk Confident',
   },
   description:
-    'Voor vrouwen die altijd doorgaan terwijl hun lichaam allang stop zegt. Begeleiding voor vrouwen die zich uitgeput, overprikkeld of zichzelf kwijt voelen, met NEI-therapie, essentiële oliën en ademcoaching.',
+    'Praktijk Confident: begeleiding voor vrouwen die uitgeput of overprikkeld zijn, met NEI-therapie, essentiële oliën en ademcoaching.',
   verification: {
     other: {
       'msvalidate.01': '477EB6D242409DBD6C2FD45D1F047D7A',
