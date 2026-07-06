@@ -29,14 +29,7 @@ export async function POST(request: NextRequest) {
     const errText = await mailerliteRes.text();
     console.error('MailerLite subscribe error', mailerliteRes.status, errText);
     return NextResponse.json(
-      {
-        ok: false,
-        error: 'Inschrijven is niet gelukt. Probeer het later opnieuw.',
-        debugStatus: mailerliteRes.status,
-        debugHasKey: Boolean(process.env.MAILERLITE_API_KEY),
-        debugHasGroup: Boolean(process.env.MAILERLITE_GROUP_ID),
-        debugKeyLength: process.env.MAILERLITE_API_KEY?.length ?? 0,
-      },
+      { ok: false, error: 'Inschrijven is niet gelukt. Probeer het later opnieuw.' },
       { status: 502 }
     );
   }
