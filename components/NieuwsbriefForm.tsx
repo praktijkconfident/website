@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function NieuwsbriefForm() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -40,6 +41,7 @@ export default function NieuwsbriefForm() {
 
       setStatus("success");
       setEmail("");
+      setConsent(false);
     } catch {
       setStatus("error");
       setErrorMessage("Er ging iets mis. Probeer het later opnieuw.");
@@ -56,7 +58,7 @@ export default function NieuwsbriefForm() {
 
   return (
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input
           type="text"
           name="website"
@@ -67,21 +69,36 @@ export default function NieuwsbriefForm() {
           aria-hidden="true"
           style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
         />
-        <input
-          type="email"
-          required
-          placeholder="Jouw e-mailadres"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 px-5 py-3 rounded-full border-2 border-wit/40 bg-wit/10 text-wit placeholder:text-wit/70 focus:outline-none focus:border-wit focus:bg-wit/20"
-        />
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="bg-accent text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50"
-        >
-          {status === "loading" ? "Bezig…" : "Inschrijven"}
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            required
+            placeholder="Jouw e-mailadres"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 px-5 py-3 rounded-full border-2 border-wit/40 bg-wit/10 text-wit placeholder:text-wit/70 focus:outline-none focus:border-wit focus:bg-wit/20"
+          />
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="bg-accent text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50"
+          >
+            {status === "loading" ? "Bezig…" : "Inschrijven"}
+          </button>
+        </div>
+        <label className="flex items-start gap-2 text-sm text-wit/80 text-left">
+          <input
+            type="checkbox"
+            required
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+            className="mt-0.5 accent-accent"
+          />
+          <span>
+            Ik geef toestemming om e-mails te ontvangen van Praktijk Confident. Uitschrijven kan
+            altijd.
+          </span>
+        </label>
       </form>
       {status === "error" && (
         <p className="text-red-200 text-sm text-center mt-3">{errorMessage}</p>
