@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Aanbod' };
+export const metadata: Metadata = {
+  title: 'Aanbod',
+  description:
+    'NEI-therapie en NEI-therapeut in Oisterwijk, Tilburg en omgeving. Bekijk de trajecten, cursussen en workshops van Praktijk Confident voor rust, ruimte en vertrouwen.',
+};
 
 const herkenbaar = [
   'Je bent snel overprikkeld of gespannen',
@@ -23,12 +27,12 @@ const inzichtsessieResultaat = [
 const aanbod = [
   {
     titel: 'Basis Traject – 3 maanden',
-    beschrijving: 'Een eerste traject van 3 maanden waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven.',
+    beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven.',
     url: 'https://praktijkconfident.kennis.shop/pay/basis-instap-traject-rust-ruimte-vertrouwen',
   },
   {
     titel: 'Verdiepend Traject – 6 maanden',
-    beschrijving: 'Een verdiepend traject van 6 maanden voor wie meer tijd en ruimte nodig heeft om patronen te doorbreken en blijvend in balans te komen.',
+    beschrijving: 'Een verdiepend traject van 6 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, voor wie meer tijd en ruimte nodig heeft om patronen te doorbreken en blijvend in balans te komen.',
     url: 'https://praktijkconfident.kennis.shop/pay/verdiepend-traject-rust-ruimte-vertrouwen',
   },
   {
@@ -38,12 +42,12 @@ const aanbod = [
   },
   {
     titel: 'Workshop essentiële oliën',
-    beschrijving: 'Ontdek hoe je essentiële oliën kunt inzetten als zachte ondersteuning bij stress, overprikkeling en herstel.',
+    beschrijving: 'Ontdek als aromatherapeut in Oisterwijk, Tilburg en omgeving hoe je essentiële oliën kunt inzetten als zachte ondersteuning bij stress, overprikkeling en herstel.',
     url: 'https://praktijkconfident.kennis.shop/pay/workshop-essentiele-olien',
   },
   {
     titel: 'Ademcoaching',
-    beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Leer opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart.',
+    beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Als ademcoach in Oisterwijk, Tilburg en omgeving leer ik je opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart.',
     url: 'https://praktijkconfident.clientomgeving.nl/afspraak-maken',
   },
 ];
@@ -62,7 +66,10 @@ export default function AanbodPage() {
         <div className="flex items-center justify-center gap-3 reveal">
           <img src="/fotos/portret.jpg" alt="Sandra Pelkmans"
             className="w-12 h-12 rounded-full object-cover object-top border-2 border-titelkleur" />
-          <span className="text-tekst/70 font-semibold">Sandra Pelkmans, energetisch therapeut</span>
+          <span className="text-tekst/70 font-semibold">
+            Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en
+            omgeving
+          </span>
         </div>
       </section>
 
@@ -146,8 +153,9 @@ export default function AanbodPage() {
             </p>
             <p className="text-tekst/80 leading-relaxed mb-6">
               In deze sessie kijken we samen naar wat er onder de oppervlakte speelt. Met
-              behulp van een energetische meting brengen we in kaart waar spanning, blokkades
-              of emotionele belasting vastzit.
+              behulp van NEI-therapie (Neuro Emotionele Integratie) en een energetische meting
+              brengen we in kaart waar spanning, blokkades of emotionele belasting vastzit.
+              Ik ben NEI-therapeut in Oisterwijk en werk met cliënten uit Tilburg en omgeving.
             </p>
             <p className="font-semibold text-primair mb-3">Aan het einde van de sessie heb je:</p>
             <ul id="inzicht-lijst" className="grid gap-2 list-disc pl-5 text-tekst/80 leading-relaxed mb-8">

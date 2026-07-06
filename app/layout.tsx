@@ -14,10 +14,42 @@ export const metadata: Metadata = {
     'Voor vrouwen die altijd doorgaan terwijl hun lichaam allang stop zegt. Begeleiding voor vrouwen die zich uitgeput, overprikkeld of zichzelf kwijt voelen, met NEI-therapie, essentiële oliën en ademcoaching.',
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HealthAndBeautyBusiness',
+  name: 'Praktijk Confident',
+  image: 'https://www.praktijkconfident.nl/fotos/portret.jpg',
+  url: 'https://www.praktijkconfident.nl',
+  telephone: '+31655912311',
+  email: 'info@praktijkconfident.nl',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Dille 23',
+    postalCode: '5063 EE',
+    addressLocality: 'Oisterwijk',
+    addressCountry: 'NL',
+  },
+  areaServed: ['Oisterwijk', 'Tilburg', 'Berkel-Enschot', 'Moergestel', 'Haaren'],
+  founder: {
+    '@type': 'Person',
+    name: 'Sandra Pelkmans',
+    jobTitle: 'Energetisch therapeut & NEI-therapeut',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '09:00', closes: '12:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '09:00', closes: '12:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '09:00', closes: '12:30' },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="nl">
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

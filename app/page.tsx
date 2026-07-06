@@ -4,6 +4,9 @@ import Energiescan from '@/components/Energiescan';
 import NieuwsbriefForm from '@/components/NieuwsbriefForm';
 
 export const metadata: Metadata = {
+  title: 'NEI-therapie & NEI-therapeut Oisterwijk, Tilburg en omgeving',
+  description:
+    'Praktijk Confident: NEI-therapeut in Oisterwijk, Tilburg en omgeving. Voor vrouwen die altijd doorgaan terwijl hun lichaam allang stop zegt. Begeleiding met NEI-therapie, essentiële oliën en ademcoaching.',
   openGraph: {
     images: ['/fotos/hero.jpg'],
   },
@@ -25,11 +28,11 @@ const werkwijzen = [
   },
   {
     titel: 'Essentiële oliën',
-    beschrijving: 'Bepaalde geuren raken iets diepers dan woorden. Ze helpen je zenuwstelsel te kalmeren en ondersteunen je lichaam bij herstel op een zachte, natuurlijke manier.',
+    beschrijving: 'Bepaalde geuren raken iets diepers dan woorden. Als aromatherapeut in Oisterwijk, Tilburg en omgeving help ik je zenuwstelsel te kalmeren en ondersteun ik je lichaam bij herstel op een zachte, natuurlijke manier.',
   },
   {
     titel: 'Ademwerk',
-    beschrijving: 'Volle neusademhaling brengt je zenuwstelsel direct tot rust. Het is een van de krachtigste dingen die je voor jezelf kunt doen, elke dag opnieuw.',
+    beschrijving: 'Volle neusademhaling brengt je zenuwstelsel direct tot rust. Als ademcoach in Oisterwijk, Tilburg en omgeving begeleid ik je bij een van de krachtigste dingen die je voor jezelf kunt doen, elke dag opnieuw.',
   },
 ];
 
@@ -72,7 +75,8 @@ export default function HomePage() {
             </h1>
             <p className="text-tekst/80 text-lg leading-relaxed mb-6 reveal">
               Begeleiding voor vrouwen die zich uitgeput, overprikkeld of zichzelf kwijt voelen,
-              met NEI-therapie, essentiële oliën en ademcoaching.
+              met NEI-therapie, essentiële oliën en ademcoaching in Oisterwijk, Tilburg en
+              omgeving.
             </p>
             <div className="flex flex-wrap gap-4 mb-8 reveal">
               <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
@@ -84,7 +88,10 @@ export default function HomePage() {
                 Bekijk trajecten →
               </a>
             </div>
-            <p className="text-tekst/70 font-semibold reveal">Sandra Pelkmans, energetisch therapeut</p>
+            <p className="text-tekst/70 font-semibold reveal">
+              Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en
+              omgeving
+            </p>
           </div>
           <div className="col-image portret reveal">
             <img src="/fotos/portret.jpg" alt="Sandra Pelkmans" />
