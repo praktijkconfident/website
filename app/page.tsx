@@ -24,7 +24,7 @@ const tickerItems = [
 const werkwijzen = [
   {
     titel: 'NEI-therapie',
-    beschrijving: 'We zoeken samen naar wat jou emotioneel bezighoudt, patronen, spanning, oude pijn. Niet door er eindeloos over te praten, maar door het los te laten op een manier die je lichaam begrijpt.',
+    beschrijving: 'Als NEI-therapeut in Oisterwijk, Tilburg en omgeving zoek ik samen met jou naar wat je emotioneel bezighoudt, patronen, spanning, oude pijn. Niet door er eindeloos over te praten, maar door het los te laten op een manier die je lichaam begrijpt.',
   },
   {
     titel: 'Essentiële oliën',
