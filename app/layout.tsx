@@ -49,7 +49,8 @@ const jsonLd = {
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '09:00', closes: '12:30' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '09:00', closes: '12:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '09:00', closes: '12:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '19:00', closes: '20:30', validFrom: '2026-10-05' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '19:00', closes: '20:30', validFrom: '2026-10-05' },
   ],
 };
 

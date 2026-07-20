@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Aanbod',
   description:
-    'NEI-therapie en NEI-therapeut in Oisterwijk en Tilburg. Bekijk trajecten, cursussen en workshops van Praktijk Confident.',
+    'NEI-therapie en NEI-therapeut in Oisterwijk en Tilburg. Trajecten, cursussen en workshops, ook bij overgang, perimenopauze en menopauze.',
 };
 
 const herkenbaar = [
@@ -15,6 +15,7 @@ const herkenbaar = [
   'Je reageert heftiger dan je eigenlijk wilt',
   'Je zorgt goed voor anderen, maar vergeet jezelf',
   'Je voelt dat het anders mag, maar weet niet waar je moet beginnen',
+  'Je merkt dat de overgang (perimenopauze, menopauze of postmenopauze) je uit balans brengt',
 ];
 
 const inzichtsessieResultaat = [
@@ -27,7 +28,7 @@ const inzichtsessieResultaat = [
 const aanbod = [
   {
     titel: 'Basis Traject – 3 maanden',
-    beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven.',
+    beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven. Ook geschikt als klachten samenhangen met de overgang (perimenopauze, menopauze of postmenopauze).',
     url: 'https://praktijkconfident.kennis.shop/pay/basis-instap-traject-rust-ruimte-vertrouwen',
   },
   {
@@ -42,12 +43,12 @@ const aanbod = [
   },
   {
     titel: 'Workshop essentiële oliën',
-    beschrijving: 'Ontdek als aromatherapeut in Oisterwijk, Tilburg en omgeving hoe je essentiële oliën kunt inzetten als zachte ondersteuning bij stress, overprikkeling en herstel.',
+    beschrijving: 'Ontdek als aromatherapeut in Oisterwijk, Tilburg en omgeving hoe je essentiële oliën kunt inzetten als zachte ondersteuning bij stress, overprikkeling en herstel, en bij klachten rondom de overgang (perimenopauze, menopauze of postmenopauze).',
     url: 'https://praktijkconfident.kennis.shop/pay/workshop-essentiele-olien',
   },
   {
     titel: 'Ademcoaching',
-    beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Als ademcoach in Oisterwijk, Tilburg en omgeving leer ik je opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart.',
+    beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Als ademcoach in Oisterwijk, Tilburg en omgeving leer ik je opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart, wat ook klachten rondom de overgang (perimenopauze, menopauze of postmenopauze) kan verminderen.',
     url: 'https://praktijkconfident.clientomgeving.nl/afspraak-maken',
   },
 ];

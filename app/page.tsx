@@ -6,7 +6,7 @@ import NieuwsbriefForm from '@/components/NieuwsbriefForm';
 export const metadata: Metadata = {
   title: 'NEI-therapie & NEI-therapeut Oisterwijk, Tilburg en omgeving',
   description:
-    'NEI-therapeut in Oisterwijk en Tilburg. Begeleiding voor vrouwen die uitgeput of overprikkeld zijn, met NEI-therapie, essentiële oliën en ademcoaching.',
+    'NEI-therapeut in Oisterwijk en Tilburg voor vrouwen die uitgeput, overprikkeld of in de overgang zijn, met NEI-therapie, oliën en ademcoaching.',
   openGraph: {
     images: ['/fotos/hero.jpg'],
   },
@@ -24,15 +24,15 @@ const tickerItems = [
 const werkwijzen = [
   {
     titel: 'NEI-therapie',
-    beschrijving: 'Als NEI-therapeut in Oisterwijk, Tilburg en omgeving zoek ik samen met jou naar wat je emotioneel bezighoudt, patronen, spanning, oude pijn. Niet door er eindeloos over te praten, maar door het los te laten op een manier die je lichaam begrijpt.',
+    beschrijving: 'Als NEI-therapeut in Oisterwijk, Tilburg en omgeving zoek ik samen met jou naar wat je emotioneel bezighoudt, patronen, spanning, oude pijn. Niet door er eindeloos over te praten, maar door het los te laten op een manier die je lichaam begrijpt. Ook als je klachten samenhangen met de overgang (perimenopauze, menopauze of postmenopauze), kan ik hier gericht mee aan de slag.',
   },
   {
     titel: 'Essentiële oliën',
-    beschrijving: 'Bepaalde geuren raken iets diepers dan woorden. Als aromatherapeut in Oisterwijk, Tilburg en omgeving help ik je zenuwstelsel te kalmeren en ondersteun ik je lichaam bij herstel op een zachte, natuurlijke manier.',
+    beschrijving: 'Bepaalde geuren raken iets diepers dan woorden. Als aromatherapeut in Oisterwijk, Tilburg en omgeving help ik je zenuwstelsel te kalmeren en ondersteun ik je lichaam bij herstel op een zachte, natuurlijke manier, ook bij klachten die horen bij de overgang (perimenopauze, menopauze of postmenopauze).',
   },
   {
     titel: 'Ademwerk',
-    beschrijving: 'Volle neusademhaling brengt je zenuwstelsel direct tot rust. Als ademcoach in Oisterwijk, Tilburg en omgeving begeleid ik je bij een van de krachtigste dingen die je voor jezelf kunt doen, elke dag opnieuw.',
+    beschrijving: 'Volle neusademhaling brengt je zenuwstelsel direct tot rust. Als ademcoach in Oisterwijk, Tilburg en omgeving begeleid ik je bij een van de krachtigste dingen die je voor jezelf kunt doen, elke dag opnieuw, wat ook klachten rondom de overgang (perimenopauze, menopauze of postmenopauze) kan verminderen.',
   },
 ];
 
@@ -43,6 +43,7 @@ const herkenbaar = [
   'Je reageert anders dan je wilt en weet niet hoe je dat kunt veranderen',
   'Je staat altijd klaar voor anderen, maar voor jezelf kom je nooit toe',
   'Je bent uitgeput maar weet niet precies waardoor',
+  'Je zit in de overgang (perimenopauze, menopauze of postmenopauze) en herkent jezelf niet meer',
 ];
 
 const voorJouAls = [
