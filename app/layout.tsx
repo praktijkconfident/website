@@ -35,6 +35,12 @@ const jsonLd = {
     addressCountry: 'NL',
   },
   areaServed: ['Oisterwijk', 'Tilburg', 'Berkel-Enschot', 'Moergestel', 'Haaren'],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    bestRating: '5',
+    reviewCount: '5',
+  },
   founder: {
     '@type': 'Person',
     name: 'Sandra Pelkmans',

@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Over mij' };
+export const metadata: Metadata = {
+  title: 'Over mij',
+  description:
+    'Maak kennis met Sandra Pelkmans, NEI-therapeut en energetisch gezinstherapeut bij Praktijk Confident in Oisterwijk. Rustig, helder en zonder oordeel.',
+};
 
 const opleidingen = [
   { titel: 'Ademcoach (HBO)', jaar: '2025' },

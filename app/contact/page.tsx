@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Contact' };
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Neem contact op met Praktijk Confident in Oisterwijk voor NEI-therapie, ademcoaching of een traject. Bel, mail of maak direct een afspraak.',
+};
 
 const contactgegevens = [
   { label: 'Adres', waarde: 'Dille 23, 5063 EE Oisterwijk' },
