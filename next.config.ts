@@ -8,6 +8,21 @@ const nextConfig: NextConfig = {
         destination: '/aanbod',
         permanent: true,
       },
+      {
+        source: '/tarieven-voor-de-behandelingen',
+        destination: '/aanbod',
+        permanent: true,
+      },
+      {
+        source: '/startpagina',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/diensten',
+        destination: '/aanbod',
+        permanent: true,
+      },
     ];
   },
 };
