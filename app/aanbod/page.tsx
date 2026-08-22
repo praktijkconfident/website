@@ -18,7 +18,7 @@ const herkenbaar = [
   'Je merkt dat de overgang (perimenopauze, menopauze of postmenopauze) je uit balans brengt',
 ];
 
-const inzichtsessieResultaat = [
+const intakeResultaat = [
   'Meer inzicht in wat er speelt',
   'Helderheid over jouw klachten of patronen',
   'Rust en richting',
@@ -122,49 +122,55 @@ export default function AanbodPage() {
               inzicht, verwerking en blijvende verandering.
             </p>
             <p className="reveal">
-              Een inzicht sessie is er altijd als instapmoment, zodat je eerst kunt voelen welk
-              traject bij jou past.
+              De intake is er altijd als instapmoment, zodat je eerst kunt voelen welk traject
+              bij jou past.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Inzichtsessie — instapmoment */}
+      {/* Intake — instapmoment */}
       <section className="bg-wit">
         <div className="max-w-3xl mx-auto px-6 pb-20">
           <p className="uppercase tracking-wide text-sm font-bold text-accent mb-2 reveal">
             Instapmoment
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-primair mb-8 reveal">
-            Inzichtsessie, een eerste stap naar rust en helderheid
+            Intake, een eerste stap naar rust en helderheid
           </h2>
           <div className="bg-achtergrond rounded-2xl p-8 border border-primair/10 reveal">
             <p className="uppercase tracking-wide text-xs font-bold text-accent mb-2">
               Instapmoment · 1 sessie
             </p>
             <div className="flex items-baseline justify-between flex-wrap gap-2 mb-1">
-              <h3 className="text-xl font-bold text-primair">Inzichtsessie</h3>
-              <span className="text-3xl font-bold text-primair">€95</span>
+              <h3 className="text-xl font-bold text-primair">Intake</h3>
+              <span className="text-3xl font-bold text-primair">€142,50</span>
             </div>
-            <p className="text-sm text-tekst/60 mb-6">Eenmalige sessie van 60 minuten</p>
+            <p className="text-sm text-tekst/60 mb-6">Eenmalige sessie van 90 minuten</p>
             <p className="text-tekst/80 leading-relaxed mb-4">
               Soms voel je dat er iets niet klopt, maar kun je er moeilijk woorden aan geven. Je
               bent moe, snel overprikkeld of loopt steeds tegen dezelfde patronen aan, zonder
               precies te weten waarom.
             </p>
+            <p className="text-tekst/80 leading-relaxed mb-4">
+              We starten met een intakegesprek van 90 minuten. De intake is meer dan alleen een
+              eerste kennismaking. Het is het moment waarop we samen stilstaan bij jouw verhaal
+              en onderzoeken wat jouw klachten met jou, je emoties en je lichaam heeft gedaan. We
+              gaan tijdens deze sessie ook meteen praktisch aan de slag, zodat je niet alleen
+              helderheid krijgt, maar ook direct kunt voelen wat mijn manier van werken voor jou
+              kan betekenen.
+            </p>
             <p className="text-tekst/80 leading-relaxed mb-6">
-              In deze sessie kijken we samen naar wat er onder de oppervlakte speelt. Met
-              behulp van NEI-therapie (Neuro Emotionele Integratie) en een energetische meting
-              brengen we in kaart waar spanning, blokkades of emotionele belasting vastzit.
-              Ik ben NEI-therapeut in Oisterwijk en werk met cliënten uit Tilburg en omgeving.
+              Voelt het goed van beide kanten en kiezen we samen voor het traject, dan kunnen we
+              direct afspraken inplannen.
             </p>
             <p className="font-semibold text-primair mb-3">Aan het einde van de sessie heb je:</p>
             <ul id="inzicht-lijst" className="grid gap-2 list-disc pl-5 text-tekst/80 leading-relaxed mb-8">
-              {inzichtsessieResultaat.map(item => <li key={item}>{item}</li>)}
+              {intakeResultaat.map(item => <li key={item}>{item}</li>)}
             </ul>
             <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
               className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-              Plan een inzichtsessie →
+              Plan een intake →
             </a>
           </div>
         </div>

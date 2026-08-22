@@ -208,9 +208,16 @@ export default function HomePage() {
             verwachten. Hoe gaat zo&rsquo;n sessie? Is het iets voor mij? Die vragen snap ik.
           </p>
           <p className="reveal">
-            Een sessie bij Praktijk Confident duurt zo&rsquo;n 60 minuten. We beginnen altijd
-            met een gesprek: wat speelt er, wat voel je, wat hoop je te vinden. Van daaruit kijk
-            ik welke aanpak het beste bij jou past.
+            We starten met een intakegesprek van 90 minuten. De intake is meer dan alleen een
+            eerste kennismaking. Het is het moment waarop we samen stilstaan bij jouw verhaal en
+            onderzoeken wat jouw klachten met jou, je emoties en je lichaam heeft gedaan. We gaan
+            tijdens deze sessie ook meteen praktisch aan de slag, zodat je niet alleen
+            helderheid krijgt, maar ook direct kunt voelen wat mijn manier van werken voor jou
+            kan betekenen.
+          </p>
+          <p className="reveal">
+            Voelt het goed van beide kanten en kiezen we samen voor het traject, dan kunnen we
+            direct afspraken inplannen.
           </p>
         </div>
         <h3 className="text-xl font-bold text-primair mb-4 reveal">
