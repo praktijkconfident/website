@@ -49,7 +49,7 @@ const aanbod = [
   {
     titel: 'Ademcoaching',
     beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Als ademcoach in Oisterwijk, Tilburg en omgeving leer ik je opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart, wat ook klachten rondom de overgang (perimenopauze, menopauze of postmenopauze) kan verminderen.',
-    url: 'https://praktijkconfident.clientomgeving.nl/afspraak-maken',
+    url: 'https://praktijkconfident.kennis.shop/pay/ademcoaching',
   },
 ];
 
