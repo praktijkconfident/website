@@ -15,8 +15,8 @@ const contactgegevens = [
 ];
 
 const openingstijden = [
-  { dag: 'Maandag', tijd: '09:00 – 12:30' },
-  { dag: 'Woensdag', tijd: '09:00 – 12:30' },
+  { dag: 'Maandag', tijden: ['09:00 – 12:30', '19:00 – 20:30'] },
+  { dag: 'Woensdag', tijden: ['09:00 – 12:30', '19:00 – 20:30'] },
 ];
 
 export default function ContactPage() {
@@ -75,17 +75,18 @@ export default function ContactPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-primair mb-8 reveal">
             Wanneer ben ik bereikbaar?
           </h2>
-          <ul id="openingstijden-lijst" className="divide-y divide-primair/10 mb-4 max-w-md">
+          <ul id="openingstijden-lijst" className="divide-y divide-primair/10 mb-8 max-w-md">
             {openingstijden.map(item => (
-              <li key={item.dag} className="flex items-center justify-between py-3">
+              <li key={item.dag} className="flex items-start justify-between py-3">
                 <span className="text-tekst/80 font-semibold">{item.dag}</span>
-                <span className="text-primair">{item.tijd}</span>
+                <span className="text-primair text-right">
+                  {item.tijden.map(tijd => (
+                    <span key={tijd} className="block">{tijd}</span>
+                  ))}
+                </span>
               </li>
             ))}
           </ul>
-          <p className="text-tekst/70 text-sm mb-8 reveal">
-            Vanaf 5 oktober ben ik ook op maandag en woensdag in de avond open, van 19:00 tot 20:30 uur.
-          </p>
           <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
             className="hero-btn mt-0! reveal">
             Boek direct een afspraak →
