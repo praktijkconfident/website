@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
 import Energiescan from '@/components/Energiescan';
 import NieuwsbriefForm from '@/components/NieuwsbriefForm';
+import MenopauzeBanner from '@/components/MenopauzeBanner';
+import EbookPopup from '@/components/EbookPopup';
 
 export const metadata: Metadata = {
   title: 'NEI-therapie & NEI-therapeut Oisterwijk, Tilburg en omgeving',
@@ -64,6 +66,9 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
+      <MenopauzeBanner />
+      <EbookPopup />
+
       {/* Hero — foto op ware grootte naast de tekst (geen uitgerekte full-width achtergrond) */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="two-col">

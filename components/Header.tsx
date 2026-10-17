@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/',         label: 'Home'     },
   { href: '/over-mij', label: 'Over mij' },
   { href: '/aanbod',   label: 'Aanbod'   },
+  { href: '/gratis',   label: 'Gratis'   },
   { href: '/contact',  label: 'Contact'  },
 ];
 
