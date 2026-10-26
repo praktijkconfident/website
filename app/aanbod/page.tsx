@@ -56,8 +56,7 @@ const aanbod = [
   {
     titel: 'Human design',
     beschrijving: 'Ontdek hoe jij in elkaar zit, waar jij energie van krijgt en hoe jij het best keuzes maakt. Human design geeft je een persoonlijke handleiding, zodat je minder tegen jezelf in gaat en meer kiest wat bij jou past.',
-    // ← Zet hier de link naar de Kennis Shop-pagina zodra die klaar is. Leeg = "Binnenkort beschikbaar".
-    url: '',
+    url: 'https://praktijkconfident.kennis.shop/pay/human-design-reading',
   },
 ];
 
