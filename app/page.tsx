@@ -117,7 +117,7 @@ const trajecten = [
       'Inclusief werkboek en persoonlijke olieblend',
     ],
     prijs: '€750',
-    prijsUitleg: 'Voor 6 maanden begeleiding, alles inbegrepen. Ook in 6 termijnen van €125.',
+    prijsUitleg: 'Voor 6 maanden begeleiding, alles inbegrepen.',
     shop: 'https://praktijkconfident.kennis.shop/pay/verdiepend-traject-rust-ruimte-vertrouwen',
   },
 ];
