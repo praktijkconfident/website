@@ -44,7 +44,7 @@ const stappen = [
     titel: 'Intake van 90 minuten',
     tekst: 'Weet je dat je aan jezelf wilt werken? Dan start je met een intake. We staan stil bij jouw verhaal en gaan meteen praktisch aan de slag. Zo voel je direct wat mijn manier van werken voor jou kan betekenen.',
     prijs: '€142,50',
-    prijsUitleg: 'Een volwaardige sessie van 90 minuten, waarin je meteen aan de slag gaat.',
+    prijsUitleg: 'Een volwaardige sessie van 90 minuten, waarin je direct aan de slag gaat.',
   },
   {
     nr: '3',
