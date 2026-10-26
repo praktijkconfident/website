@@ -16,7 +16,7 @@ export default function Footer() {
           <p className="text-wit font-bold text-base mb-2">Praktijk Confident</p>
           <p className="leading-relaxed">
             Sandra Pelkmans<br />
-            NEI-therapeut &amp; energetisch therapeut<br />
+            Energetisch therapeut, ademcoach en aromatherapeut<br />
             Dille 23, 5063 EE Oisterwijk
           </p>
         </div>

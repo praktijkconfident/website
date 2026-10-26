@@ -37,7 +37,7 @@ export default function ContactPage() {
           <div className="flex items-center justify-center gap-3 reveal">
             <img src="/fotos/portret.jpg" alt="Sandra Pelkmans"
               className="w-10 h-10 rounded-full object-cover object-top border-2 border-titelkleur" />
-            <span className="text-wit/80">Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut</span>
+            <span className="text-wit/80">Sandra Pelkmans, energetisch therapeut, ademcoach en aromatherapeut</span>
           </div>
         </div>
       </section>
