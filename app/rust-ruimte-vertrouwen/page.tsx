@@ -203,7 +203,7 @@ export default function RustRuimteVertrouwenPage() {
       </section>
 
       {/* De trajecten */}
-      <section className="bg-primair">
+      <section id="trajecten" className="bg-primair scroll-mt-6">
         <div className="max-w-5xl mx-auto px-6 py-20">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <p className={kickerLicht}>Kies wat bij je past</p>

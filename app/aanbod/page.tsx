@@ -29,12 +29,12 @@ const aanbod = [
   {
     titel: 'Basis Traject – 3 maanden',
     beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven. Ook geschikt als klachten samenhangen met de overgang (perimenopauze, menopauze of postmenopauze).',
-    url: 'https://praktijkconfident.kennis.shop/pay/basis-instap-traject-rust-ruimte-vertrouwen',
+    url: '/rust-ruimte-vertrouwen',
   },
   {
     titel: 'Verdiepend Traject – 6 maanden',
     beschrijving: 'Een verdiepend traject van 6 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, voor wie meer tijd en ruimte nodig heeft om patronen te doorbreken en blijvend in balans te komen.',
-    url: 'https://praktijkconfident.kennis.shop/pay/verdiepend-traject-rust-ruimte-vertrouwen',
+    url: '/rust-ruimte-vertrouwen',
   },
   {
     titel: 'Online cursus: werken met de biotensor',
@@ -187,7 +187,8 @@ export default function AanbodPage() {
               <div key={item.url} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col">
                 <h3 className="text-xl font-bold text-primair mb-2">{item.titel}</h3>
                 <p className="text-tekst/70 leading-relaxed mb-6 flex-1">{item.beschrijving}</p>
-                <a href={item.url} target="_blank" rel="noopener noreferrer"
+                <a href={item.url}
+                  {...(item.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="font-bold text-primair hover:underline">
                   Meer info →
                 </a>
