@@ -53,6 +53,12 @@ const aanbod = [
     beschrijving: 'Je adem als natuurlijke rem op stress en overprikkeling. Als ademcoach in Oisterwijk, Tilburg en omgeving leer ik je opnieuw rustig en ontspannen ademen via de neus, zodat je zenuwstelsel meer veiligheid en rust ervaart, wat ook klachten rondom de overgang (perimenopauze, menopauze of postmenopauze) kan verminderen.',
     url: 'https://praktijkconfident.kennis.shop/pay/ademcoaching',
   },
+  {
+    titel: 'Human design',
+    beschrijving: 'Ontdek hoe jij in elkaar zit, waar jij energie van krijgt en hoe jij het best keuzes maakt. Human design geeft je een persoonlijke handleiding, zodat je minder tegen jezelf in gaat en meer kiest wat bij jou past.',
+    // ← Zet hier de link naar de Kennis Shop-pagina zodra die klaar is. Leeg = "Binnenkort beschikbaar".
+    url: '',
+  },
 ];
 
 export default function AanbodPage() {
@@ -192,17 +198,21 @@ export default function AanbodPage() {
           </h2>
           <div id="aanbod-grid" className="grid gap-8 sm:grid-cols-2">
             {aanbod.map(item => (
-              <div key={item.url} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col">
+              <div key={item.titel} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col">
                 <div className="flex items-baseline justify-between gap-2 mb-2">
                   <h3 className="text-xl font-bold text-primair">{item.titel}</h3>
                   {'prijs' in item && <span className="text-xl font-bold text-primair">{item.prijs}</span>}
                 </div>
                 <p className="text-tekst/70 leading-relaxed mb-6 flex-1">{item.beschrijving}</p>
-                <a href={item.url}
-                  {...(item.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="font-bold text-primair hover:underline">
-                  {item.url.startsWith('/') ? 'Bekijk het traject →' : 'Meer info →'}
-                </a>
+                {item.url ? (
+                  <a href={item.url}
+                    {...(item.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="font-bold text-primair hover:underline">
+                    {item.url.startsWith('/') ? 'Bekijk het traject →' : 'Meer info →'}
+                  </a>
+                ) : (
+                  <span className="font-bold text-tekst/50">Binnenkort beschikbaar</span>
+                )}
               </div>
             ))}
           </div>
