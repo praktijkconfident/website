@@ -27,12 +27,14 @@ const intakeResultaat = [
 
 const aanbod = [
   {
-    titel: 'Basis Traject – 3 maanden',
+    titel: 'NEI-traject · 3 maanden',
+    prijs: '€395',
     beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven. Ook geschikt als klachten samenhangen met de overgang (perimenopauze, menopauze of postmenopauze).',
     url: '/#trajecten',
   },
   {
-    titel: 'Verdiepend Traject – 6 maanden',
+    titel: 'NEI-traject · 6 maanden',
+    prijs: '€750',
     beschrijving: 'Een verdiepend traject van 6 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, voor wie meer tijd en ruimte nodig heeft om patronen te doorbreken en blijvend in balans te komen.',
     url: '/#trajecten',
   },
@@ -97,7 +99,7 @@ export default function AanbodPage() {
             Veel vrouwen die bij mij komen, herkennen een of meer van deze gevoelens:
           </p>
         </div>
-        <ul id="herken-aanbod-lijst" className="grid gap-2 sm:grid-cols-2 list-disc pl-5 text-tekst/80 leading-relaxed my-8">
+        <ul id="herken-aanbod-lijst" className="grid gap-x-12 gap-y-2 sm:grid-cols-2 list-disc pl-5 text-tekst/80 leading-relaxed my-8">
           {herkenbaar.map(item => <li key={item}>{item}</li>)}
         </ul>
         <p className="text-tekst/80 leading-relaxed italic reveal">
@@ -172,6 +174,12 @@ export default function AanbodPage() {
               className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
               Plan een intake →
             </a>
+            <p className="text-tekst/70 mt-5">
+              Twijfel je nog? Plan dan eerst een{' '}
+              <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer" className="text-primair font-semibold underline">
+                gratis belafspraak van 15 minuten
+              </a>.
+            </p>
           </div>
         </div>
       </section>
@@ -185,12 +193,15 @@ export default function AanbodPage() {
           <div id="aanbod-grid" className="grid gap-8 sm:grid-cols-2">
             {aanbod.map(item => (
               <div key={item.url} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col">
-                <h3 className="text-xl font-bold text-primair mb-2">{item.titel}</h3>
+                <div className="flex items-baseline justify-between gap-2 mb-2">
+                  <h3 className="text-xl font-bold text-primair">{item.titel}</h3>
+                  {'prijs' in item && <span className="text-xl font-bold text-primair">{item.prijs}</span>}
+                </div>
                 <p className="text-tekst/70 leading-relaxed mb-6 flex-1">{item.beschrijving}</p>
                 <a href={item.url}
                   {...(item.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="font-bold text-primair hover:underline">
-                  Meer info →
+                  {item.url.startsWith('/') ? 'Bekijk het traject →' : 'Meer info →'}
                 </a>
               </div>
             ))}

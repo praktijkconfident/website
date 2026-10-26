@@ -18,6 +18,14 @@ const gratisItems = [
     beschrijving:
       'Voor vrouwen die zich uitgeput, overprikkeld of zichzelf kwijt voelen. Begrijp wat je lichaam doet en ontdek wat je zelf kunt doen.',
   },
+  {
+    href: '/#energiescan',
+    soort: 'Online test',
+    titel: 'Energiescan',
+    beschrijving:
+      'Ontdek in een paar minuten waar jouw energie stroomt en waar ze vastloopt. Je krijgt direct je persoonlijke energieprofiel.',
+    knop: 'Doe de energiescan →',
+  },
 ];
 
 export default function GratisPage() {
@@ -43,7 +51,7 @@ export default function GratisPage() {
               <p className="uppercase tracking-wide text-xs font-bold text-accent mb-2">{item.soort}</p>
               <h2 className="text-xl font-bold text-primair mb-3">{item.titel}</h2>
               <p className="text-tekst/80 leading-relaxed mb-4">{item.beschrijving}</p>
-              <span className="font-bold text-primair">Download gratis →</span>
+              <span className="font-bold text-primair">{'knop' in item ? item.knop : 'Download gratis →'}</span>
             </Link>
           ))}
         </div>

@@ -38,11 +38,11 @@ export default function OverMijPage() {
             <div className="flex flex-wrap gap-4 reveal">
               <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
                 className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-                Maak een afspraak →
+                Plan een intake →
               </a>
-              <a href="/contact"
+              <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
                 className="inline-block border border-primair text-primair font-bold px-8 py-3 rounded-full hover:bg-primair hover:text-wit transition-colors">
-                Neem contact op →
+                Twijfel je? Bel gratis 15 min
               </a>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function OverMijPage() {
             ongrijpbaar. Totdat ik jaren geleden in aanraking kwam met NEI-therapie. Tijdens die
             sessies kreeg ik helderheid en inzichten die ik zo lang had gemist. Daarna wist ik:
             dit wil ik zelf ook leren en doorgeven. Ik schreef me in voor de opleiding tot
-            energetisch gezinstherapeut, waar ik me verder verdiepte in N.E.I. en andere
+            energetisch gezinstherapeut, waar ik me verder verdiepte in NEI en andere
             methodes om mensen te begeleiden in het vinden van rust, ruimte en vertrouwen.
           </p>
           <p className="reveal">
@@ -133,6 +133,28 @@ export default function OverMijPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Volgende stap */}
+      <section className="bg-primair">
+        <div className="max-w-2xl mx-auto px-6 py-20 text-center">
+          <p className="uppercase tracking-wide text-sm font-bold text-titelkleur mb-2 reveal">
+            Kennismaken
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-wit mb-6 reveal">
+            Voelt het goed? Dan zet ik graag de eerste stap met je.
+          </h2>
+          <p className="text-wit/80 leading-relaxed mb-8 reveal">
+            Bekijk mijn NEI-traject Rust, Ruimte &amp; Vertrouwen, of plan direct een intake.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 reveal">
+            <a href="/#trajecten" className="hero-btn mt-0!">Bekijk de trajecten →</a>
+            <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
+              className="inline-block border-2 border-titelkleur text-titelkleur font-semibold px-8 py-3 rounded-full hover:bg-titelkleur/10 transition-colors">
+              Plan een intake
+            </a>
+          </div>
         </div>
       </section>
 

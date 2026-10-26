@@ -234,7 +234,7 @@ export default function Energiescan() {
             Bekijk mijn energieprofiel ↗
           </button>
           <p style={{ fontSize: "0.8rem", color: "#7a9a88", marginTop: "0.6rem" }}>
-            {allesIngevuld ? "Alles ingevuld — opent in een nieuw tabblad" : `${aantalIngevuld} van 10 ingevuld`}
+            {allesIngevuld ? "Alles ingevuld, opent in een nieuw tabblad" : `${aantalIngevuld} van 10 ingevuld`}
           </p>
         </div>
       </div>

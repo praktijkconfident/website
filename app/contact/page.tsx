@@ -37,7 +37,7 @@ export default function ContactPage() {
           <div className="flex items-center justify-center gap-3 reveal">
             <img src="/fotos/portret.jpg" alt="Sandra Pelkmans"
               className="w-10 h-10 rounded-full object-cover object-top border-2 border-titelkleur" />
-            <span className="text-wit/80">Sandra Pelkmans, energetisch therapeut</span>
+            <span className="text-wit/80">Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut</span>
           </div>
         </div>
       </section>
@@ -89,8 +89,14 @@ export default function ContactPage() {
           </ul>
           <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer"
             className="hero-btn mt-0! reveal">
-            Boek direct een afspraak →
+            Plan een intake →
           </a>
+          <p className="text-tekst/70 mt-6 reveal">
+            Twijfel je nog? Plan dan eerst een{' '}
+            <a href="https://praktijkconfident.clientomgeving.nl/afspraak-maken" target="_blank" rel="noopener noreferrer" className="text-primair font-semibold underline">
+              gratis belafspraak van 15 minuten
+            </a>.
+          </p>
         </div>
       </section>
 
@@ -103,8 +109,8 @@ export default function ContactPage() {
           Of stuur mij een berichtje
         </h2>
         <p className="text-tekst/80 leading-relaxed mb-8 reveal">
-          Je kunt me altijd bereiken via e-mail of telefoon. Ik reageer zo snel mogelijk —
-          doorgaans binnen 1 werkdag.
+          Je kunt me altijd bereiken via e-mail of telefoon. Ik reageer zo snel mogelijk,
+          meestal binnen 1 werkdag.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 reveal">
           <a href="mailto:info@praktijkconfident.nl"

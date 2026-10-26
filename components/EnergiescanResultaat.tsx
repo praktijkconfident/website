@@ -35,7 +35,7 @@ export default function EnergiescanResultaat({ scores }: { scores: number[] }) {
       {/* Tips */}
       <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.3rem", fontWeight: 500, color: "#3d6b55", margin: "1.75rem 0 1rem" }}>
         {lageGebieden.length === 0
-          ? "Jij scoort op alle gebieden hoog — goed bezig!"
+          ? "Jij scoort op alle gebieden hoog. Goed bezig!"
           : `Aandacht voor ${lageGebieden.length} gebied${lageGebieden.length > 1 ? "en" : ""}`}
       </p>
 

@@ -44,7 +44,7 @@ const stappen = [
     titel: 'Intake van 90 minuten',
     tekst: 'Weet je dat je aan jezelf wilt werken? Dan start je met een intake. We staan stil bij jouw verhaal en gaan meteen praktisch aan de slag. Zo voel je direct wat mijn manier van werken voor jou kan betekenen.',
     prijs: '€142,50',
-    prijsUitleg: 'Een volwaardige sessie van 90 minuten, geen verkoopgesprek.',
+    prijsUitleg: 'Een volwaardige sessie van 90 minuten, waarin je meteen aan de slag gaat.',
   },
   {
     nr: '3',
@@ -65,40 +65,35 @@ const herkenbaar = [
   'Je voelt: ik wil het anders. Maar je weet niet waar je moet beginnen.',
 ];
 
-const werkwijzen = [
-  {
-    titel: 'NEI-therapie',
-    beschrijving:
-      'We zoeken uit waar oude patronen vandaan komen, zoals altijd eerst voor anderen zorgen. Zodat je er niet meer automatisch in schiet.',
-  },
+const ondersteunend = [
   {
     titel: 'Ademcoaching',
     beschrijving:
       "Met een rustige, volle neusademhaling komt je zenuwstelsel tot rust. Je leert eenvoudige oefeningen voor overdag, en ook voor als je 's nachts wakker ligt.",
   },
   {
-    titel: 'Human design',
-    beschrijving:
-      'Je krijgt inzicht in hoe jij in elkaar zit en waar jij energie van krijgt. Dat helpt je om keuzes te maken die bij jou passen.',
-  },
-  {
-    titel: 'Aromatherapie',
+    titel: 'Essentiële oliën',
     beschrijving:
       'Bepaalde geuren raken iets diepers dan woorden. Je krijgt een persoonlijke olieblend voor je eigen rustmoment of avondritueel, als zachte steun voor je lichaam.',
+  },
+  {
+    titel: 'Human design',
+    beschrijving:
+      'Inzicht in hoe jij in elkaar zit en waar jij energie van krijgt. Dat helpt je om keuzes te maken die bij jou passen.',
   },
 ];
 
 const trajecten = [
   {
-    label: '3 maanden',
+    label: 'NEI-traject · 3 maanden',
     titel: 'Jouw reis terug naar jezelf',
     sub: 'Voor als je weer rust en ruimte wilt voelen',
     punten: [
+      '3 persoonlijke NEI-sessies van 60 minuten',
       'Je ontdekt waar je energie naartoe gaat',
       'Je leert luisteren naar de signalen van je lichaam',
       'Je herkent je patronen en leert je grenzen kennen',
       'Je maakt een eigen balansplan voor na het traject',
-      '3 persoonlijke sessies van 60 minuten, met human design als onderdeel',
       'Inclusief werkboek en persoonlijke olieblend',
     ],
     prijs: '€395',
@@ -106,14 +101,14 @@ const trajecten = [
     shop: 'https://praktijkconfident.kennis.shop/pay/basis-instap-traject-rust-ruimte-vertrouwen',
   },
   {
-    label: '6 maanden · verdieping',
+    label: 'NEI-traject · 6 maanden · verdieping',
     titel: 'Van overleven naar bewust leven',
     sub: 'Voor als je al lang veel draagt en echt anders wilt leven',
     punten: [
+      '5 persoonlijke NEI-sessies van 60 minuten en een cacaoceremonie van ongeveer 2 uur',
       'Elke maand een eigen thema: vertragen, patronen begrijpen, loslaten, grenzen, nieuwe keuzes en laten landen',
       'Meer tijd om nieuwe gewoontes blijvend te maken',
       'Je maakt een zelfzorgplan en een plan voor als het even minder gaat',
-      '5 persoonlijke sessies van 60 minuten en een cacaoceremonie van 2 uur, met human design als onderdeel',
       'Inclusief werkboek en persoonlijke olieblend',
     ],
     prijs: '€750',
@@ -202,39 +197,46 @@ export default function HomePage() {
       <EbookPopup />
 
       {/* Opening */}
-      <section className="bg-primair">
-        <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <p className={kickerLicht}>Persoonlijk traject voor vrouwen van 40+</p>
-          <h1 className="text-3xl md:text-5xl font-bold text-wit mb-6 leading-tight reveal">
-            Je hebt jaren voor iedereen gezorgd.
-            <br />
-            <span className="text-titelkleur">Nu ben jij aan de beurt.</span>
-          </h1>
-          <p className="text-wit/80 leading-relaxed text-lg mb-8 reveal">
-            Rust, Ruimte &amp; Vertrouwen is een traject van 3 of 6 maanden. Voor als je moe bent,
-            slecht slaapt in de overgang en eindelijk weer tijd wilt maken voor jezelf.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 reveal">
-            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer" className="hero-btn mt-0!">
-              Plan een intake →
-            </a>
-            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
-              className="inline-block border-2 border-titelkleur text-titelkleur font-semibold px-8 py-3 rounded-full hover:bg-titelkleur/10 transition-colors">
-              Twijfel je? Bel gratis 15 min
-            </a>
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <div className="two-col">
+          <div className="col-text">
+            <p className="uppercase tracking-wide text-sm font-bold text-accent mb-3 reveal">
+              NEI-therapie voor vrouwen van 40+
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-primair mb-4 leading-tight reveal">
+              Je hebt jaren voor iedereen gezorgd. Nu ben jij aan de beurt.
+            </h1>
+            <p className="text-tekst/80 text-lg leading-relaxed mb-6 reveal">
+              Rust, Ruimte &amp; Vertrouwen is een NEI-traject van 3 of 6 maanden. Voor als je moe
+              bent, slecht slaapt in de overgang en eindelijk weer tijd wilt maken voor jezelf.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-4 reveal">
+              <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+                className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+                Plan een intake →
+              </a>
+              <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+                className="inline-block border border-primair text-primair font-bold px-8 py-3 rounded-full hover:bg-primair hover:text-wit transition-colors">
+                Twijfel je? Bel gratis 15 min
+              </a>
+            </div>
+            <p className="text-tekst/60 text-sm mb-8 reveal">
+              Eerst kijken waar je staat? <a href="#energiescan" className="underline hover:text-primair">Doe de gratis energiescan</a>
+            </p>
+            <p className="text-tekst/70 font-semibold reveal">
+              Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en
+              omgeving
+            </p>
           </div>
-          <p className="text-wit/60 text-sm mt-6 reveal">
-            Eerst kijken waar je staat? <a href="#energiescan" className="underline hover:text-wit">Doe de gratis energiescan</a>
-          </p>
-          <p className="text-wit/70 font-semibold mt-10 reveal">
-            Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en omgeving
-          </p>
+          <div className="col-image portret reveal">
+            <img src="/fotos/portret.jpg" alt="Sandra Pelkmans" />
+          </div>
         </div>
       </section>
 
       {/* Ticker */}
-      <div className="bg-titelkleur/40 py-4 ticker-wrap">
-        <div className="ticker-track text-primair font-semibold uppercase tracking-wide text-sm">
+      <div className="bg-primair py-4 ticker-wrap">
+        <div className="ticker-track text-wit font-semibold uppercase tracking-wide text-sm">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="mx-4">{item} ·</span>
           ))}
@@ -249,7 +251,7 @@ export default function HomePage() {
           Die stille vermoeidheid die maar niet weggaat. Van buitenaf ziet het er prima uit. Maar
           van binnen voel je je leeg, geprikkeld of moe op een manier die slaap niet oplost.
         </p>
-        <ul id="rrv-herken-lijst" className="grid gap-2 sm:grid-cols-2 list-disc pl-5 text-tekst/80 leading-relaxed my-8">
+        <ul id="rrv-herken-lijst" className="grid gap-x-12 gap-y-2 sm:grid-cols-2 list-disc pl-5 text-tekst/80 leading-relaxed my-8">
           {herkenbaar.map(item => <li key={item}>{item}</li>)}
         </ul>
         <p className="text-tekst/80 leading-relaxed italic reveal">
@@ -300,12 +302,24 @@ export default function HomePage() {
             <p className={kicker}>Hoe ik werk</p>
             <h2 className={h2}>Praktisch, warm en met beide benen op de grond</h2>
             <p className="text-tekst/80 leading-relaxed reveal">
-              In het traject combineer ik vier manieren van werken. Jij hoeft niet te weten hoe ze
-              werken. Ik kies wat op dat moment bij jou past.
+              De basis van elk traject is NEI-therapie. Daaromheen zet ik andere hulpmiddelen in,
+              als ze jou verder helpen. Jij hoeft niet te weten hoe ze werken. Ik kies wat op dat
+              moment bij jou past.
             </p>
           </div>
-          <div id="rrv-werkwijze-grid" className="grid gap-6 sm:grid-cols-2">
-            {werkwijzen.map(item => (
+          <div className="bg-primair text-wit rounded-2xl p-8 md:p-10 mb-6 reveal">
+            <p className="uppercase tracking-wide text-xs font-bold text-titelkleur mb-2">De basis van je traject</p>
+            <h3 className="text-2xl font-bold mb-3">NEI-therapie</h3>
+            <p className="text-wit/85 leading-relaxed max-w-3xl">
+              NEI staat voor Neuro Emotionele Integratie. Samen zoeken we uit wat je emotioneel
+              bezighoudt: patronen, spanning, oude pijn. Zoals altijd eerst voor anderen zorgen. Niet
+              door er eindeloos over te praten, maar door het los te laten op een manier die je
+              lichaam begrijpt. Zodat je er niet meer automatisch in schiet.
+            </p>
+          </div>
+          <p className="uppercase tracking-wide text-xs font-bold text-accent mb-4 reveal">Ondersteunend, waar het jou helpt</p>
+          <div id="rrv-werkwijze-grid" className="grid gap-6 sm:grid-cols-3">
+            {ondersteunend.map(item => (
               <div key={item.titel} className="bg-achtergrond rounded-2xl p-8 border border-primair/10">
                 <h3 className="text-lg font-bold text-primair mb-2">{item.titel}</h3>
                 <p className="text-tekst/70 leading-relaxed">{item.beschrijving}</p>
@@ -357,8 +371,8 @@ export default function HomePage() {
             <p className={kickerLicht}>Kies wat bij je past</p>
             <h2 className="text-2xl md:text-3xl font-bold text-wit mb-6 reveal">Rust, Ruimte &amp; Vertrouwen</h2>
             <p className="text-wit/80 leading-relaxed reveal">
-              Na de intake kiezen we samen. Bij beide trajecten krijg je persoonlijke sessies en je
-              eigen werkboek. Het verschil zit in de tijd en de diepgang.
+              Beide trajecten zijn NEI-trajecten. Ademcoaching en essentiële oliën zetten we in waar
+              het je helpt. Na de intake kiezen we samen. Het verschil zit in de tijd en de diepgang.
             </p>
           </div>
           <div id="rrv-trajecten-grid" className="grid gap-8 sm:grid-cols-2">
