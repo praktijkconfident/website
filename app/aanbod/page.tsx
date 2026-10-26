@@ -70,8 +70,8 @@ export default function AanbodPage() {
           <img src="/fotos/portret.jpg" alt="Sandra Pelkmans"
             className="w-12 h-12 rounded-full object-cover object-top border-2 border-titelkleur" />
           <span className="text-tekst/70 font-semibold">
-            Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en
-            omgeving
+            Sandra Pelkmans, NEI-therapeut, ademcoach en aromatherapeut in Oisterwijk, Tilburg en
+              omgeving
           </span>
         </div>
       </section>

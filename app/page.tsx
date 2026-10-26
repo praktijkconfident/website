@@ -224,7 +224,7 @@ export default function HomePage() {
               Eerst kijken waar je staat? <a href="#energiescan" className="underline hover:text-primair">Doe de gratis energiescan</a>
             </p>
             <p className="text-tekst/70 font-semibold reveal">
-              Sandra Pelkmans, energetisch therapeut &amp; NEI-therapeut in Oisterwijk, Tilburg en
+              Sandra Pelkmans, NEI-therapeut, ademcoach en aromatherapeut in Oisterwijk, Tilburg en
               omgeving
             </p>
           </div>
