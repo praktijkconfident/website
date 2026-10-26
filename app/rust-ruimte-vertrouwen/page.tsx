@@ -10,9 +10,54 @@ export const metadata: Metadata = {
 
 const AFSPRAAK_URL = 'https://praktijkconfident.clientomgeving.nl/afspraak-maken';
 
+const tickerItems = [
+  'Ik voel meer rust in mijn lichaam',
+  'Ik heb meer zelfvertrouwen',
+  'Ik kies vaker voor mezelf',
+  'Ik heb meer energie',
+  'Ik zit beter in mijn vel',
+  'Ik slaap beter',
+];
+
+const voorJouAls = [
+  'Je vastloopt maar niet precies weet waarom',
+  'Je reguliere hulp hebt geprobeerd maar onvoldoende verandering ervaart',
+  'Je moe bent van analyseren en gewoon wil voelen wat er nodig is',
+  'Je klachten hebt die lichaam én hoofd allebei raken',
+  'Je klaar bent om een stap richting jezelf te zetten',
+];
+
+const stappen = [
+  {
+    nr: '1',
+    titel: 'Twijfel je nog? Bel gratis',
+    tekst: 'Weet je nog niet of dit bij je past? Plan een gratis belafspraak van 15 minuten. Je vertelt kort wat er speelt en je stelt je vragen. Vrijblijvend.',
+  },
+  {
+    nr: '2',
+    titel: 'Intake van 90 minuten',
+    tekst: 'Weet je dat je aan jezelf wilt werken? Dan start je met een intake. We staan stil bij jouw verhaal en gaan meteen praktisch aan de slag. Zo voel je direct wat mijn manier van werken voor jou kan betekenen.',
+    prijs: '€142,50',
+  },
+  {
+    nr: '3',
+    titel: 'Jouw traject',
+    tekst: 'Voelt het goed van beide kanten? Dan kiezen we samen voor een traject van 3 of 6 maanden en plannen we direct de afspraken in.',
+  },
+];
+
+const korteErvaringen = [
+  `Na jaren altijd 'aan' te staan, voelde ik na een paar sessies eindelijk rust in mijn hoofd.`,
+  'Ik wist niet dat ik dit zo lang met me meedroeg.',
+  'Ik kwam binnen met spanning en vermoeidheid en ging naar huis met ruimte in mijn lijf.',
+  'Eindelijk begrijp ik waarom ik zo reageer.',
+];
+
 const herkenbaar = [
   'Je ligt midden in de nacht wakker en je hoofd staat aan.',
   'Je bent moe, ook als je genoeg uren in bed ligt.',
+  'Je bent snel overprikkeld, terwijl je dat vroeger niet zo kende.',
+  'Je zit in de overgang en herkent jezelf niet meer.',
   'Je zegt ja tegen iedereen, en nee tegen jezelf.',
   'Tijd voor jezelf komt later. Als alles af is. Maar het is nooit af.',
   'De kinderen hebben je minder nodig, en je weet niet goed wat jij nu wilt.',
@@ -28,7 +73,7 @@ const werkwijzen = [
   {
     titel: 'Ademcoaching',
     beschrijving:
-      "Je leert eenvoudige ademoefeningen die je lichaam helpen ontspannen. Overdag, en ook als je 's nachts wakker ligt.",
+      "Met een rustige, volle neusademhaling komt je zenuwstelsel tot rust. Je leert eenvoudige oefeningen voor overdag, en ook voor als je 's nachts wakker ligt.",
   },
   {
     titel: 'Human design',
@@ -38,7 +83,7 @@ const werkwijzen = [
   {
     titel: 'Aromatherapie',
     beschrijving:
-      'Je krijgt een persoonlijke olieblend voor je eigen rustmoment of avondritueel. Een klein ritueel dat je eraan herinnert om voor jezelf te kiezen.',
+      'Bepaalde geuren raken iets diepers dan woorden. Je krijgt een persoonlijke olieblend voor je eigen rustmoment of avondritueel, als zachte steun voor je lichaam.',
   },
 ];
 
@@ -107,6 +152,10 @@ const vragen = [
     a: 'NEI staat voor Neuro Emotionele Integratie. Met deze methode zoeken we uit welke oude ervaringen of overtuigingen je nu nog in de weg zitten. Zo kun je ze een plek geven.',
   },
   {
+    v: 'Hoe begin ik?',
+    a: 'Weet je dat je aan jezelf wilt werken? Dan start je met een intake van 90 minuten (€142,50). Twijfel je nog? Plan dan eerst een gratis belafspraak van 15 minuten.',
+  },
+  {
     v: 'Kies ik voor 3 of 6 maanden?',
     a: 'Dat bespreken we samen. Je krijgt een traject op maat, dat het best past bij jou.',
   },
@@ -142,20 +191,36 @@ export default function RustRuimteVertrouwenPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 reveal">
             <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer" className="hero-btn mt-0!">
-              Plan een gratis belafspraak →
+              Plan een intake →
             </a>
-            <a href="#energiescan"
+            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
               className="inline-block border-2 border-titelkleur text-titelkleur font-semibold px-8 py-3 rounded-full hover:bg-titelkleur/10 transition-colors">
-              Doe eerst de energiescan
+              Twijfel je? Bel gratis 15 min
             </a>
           </div>
+          <p className="text-wit/60 text-sm mt-6 reveal">
+            Eerst kijken waar je staat? <a href="#energiescan" className="underline hover:text-wit">Doe de gratis energiescan</a>
+          </p>
         </div>
       </section>
+
+      {/* Ticker */}
+      <div className="bg-titelkleur/40 py-4 ticker-wrap">
+        <div className="ticker-track text-primair font-semibold uppercase tracking-wide text-sm">
+          {[...tickerItems, ...tickerItems].map((item, i) => (
+            <span key={i} className="mx-4">{item} ·</span>
+          ))}
+        </div>
+      </div>
 
       {/* Herken je dit? */}
       <section className="max-w-3xl mx-auto px-6 py-20">
         <p className={kicker}>Herken je dit?</p>
         <h2 className={h2}>Je zorgt goed voor iedereen. Behalve voor jezelf.</h2>
+        <p className="text-tekst/80 leading-relaxed reveal">
+          Die stille vermoeidheid die maar niet weggaat. Van buitenaf ziet het er prima uit. Maar
+          van binnen voel je je leeg, geprikkeld of moe op een manier die slaap niet oplost.
+        </p>
         <ul id="rrv-herken-lijst" className="grid gap-2 sm:grid-cols-2 list-disc pl-5 text-tekst/80 leading-relaxed my-8">
           {herkenbaar.map(item => <li key={item}>{item}</li>)}
         </ul>
@@ -180,8 +245,28 @@ export default function RustRuimteVertrouwenPage() {
         </div>
       </section>
 
+      {/* Je lichaam liegt niet */}
+      <section className="max-w-3xl mx-auto px-6 py-20">
+        <p className={kicker}>Inzicht &amp; bewustwording</p>
+        <h2 className={h2}>Je lichaam liegt niet. Het onthoudt alles.</h2>
+        <div className="space-y-4 text-tekst/80 leading-relaxed">
+          <p className="reveal">
+            Ergens onderweg zijn veel vrouwen zichzelf een beetje kwijtgeraakt. Niet door een
+            grote fout, maar stap voor stap, jaar na jaar.
+          </p>
+          <p className="font-semibold text-primair reveal">
+            We leerden te functioneren in plaats van te voelen.
+          </p>
+          <p className="reveal">
+            Vermoeidheid, prikkelbaarheid of slecht slapen zijn zelden toeval. Het zijn signalen.
+            In het traject leer je weer luisteren. Naar je lichaam, je patronen en de plekken waar
+            iets vastzit. En dan, zonder drama en zonder grote woorden, laten we het los.
+          </p>
+        </div>
+      </section>
+
       {/* Hoe ik werk */}
-      <section className="border-t border-primair/10">
+      <section className="bg-wit border-t border-primair/10">
         <div className="max-w-5xl mx-auto px-6 py-20">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <p className={kicker}>Hoe ik werk</p>
@@ -193,11 +278,45 @@ export default function RustRuimteVertrouwenPage() {
           </div>
           <div id="rrv-werkwijze-grid" className="grid gap-6 sm:grid-cols-2">
             {werkwijzen.map(item => (
-              <div key={item.titel} className="bg-wit rounded-2xl p-8 border border-primair/10">
+              <div key={item.titel} className="bg-achtergrond rounded-2xl p-8 border border-primair/10">
                 <h3 className="text-lg font-bold text-primair mb-2">{item.titel}</h3>
                 <p className="text-tekst/70 leading-relaxed">{item.beschrijving}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zo begin je */}
+      <section className="border-t border-primair/10">
+        <div className="max-w-5xl mx-auto px-6 py-20">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <p className={kicker}>Zo begin je</p>
+            <h2 className={h2}>Wat kun je verwachten als je de stap zet?</h2>
+            <p className="text-tekst/80 leading-relaxed reveal">
+              Je weet misschien nog niet precies hoe het gaat. Is het iets voor mij? Die vraag
+              snap ik. Daarom zijn er twee manieren om te beginnen.
+            </p>
+          </div>
+          <div id="rrv-stappen-grid" className="grid gap-6 sm:grid-cols-3">
+            {stappen.map(st => (
+              <div key={st.nr} className="bg-wit rounded-2xl p-8 border border-primair/10 flex flex-col">
+                <span className="w-10 h-10 rounded-full bg-primair text-wit font-bold flex items-center justify-center mb-4">{st.nr}</span>
+                <h3 className="text-lg font-bold text-primair mb-2">{st.titel}</h3>
+                <p className="text-tekst/70 leading-relaxed flex-1">{st.tekst}</p>
+                {st.prijs && <p className="text-2xl font-bold text-primair mt-4">{st.prijs}</p>}
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-10 reveal">
+            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+              Plan een intake →
+            </a>
+            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-block border border-primair text-primair font-bold px-8 py-3 rounded-full hover:bg-primair hover:text-wit transition-colors">
+              Gratis belafspraak (15 min)
+            </a>
           </div>
         </div>
       </section>
@@ -209,8 +328,8 @@ export default function RustRuimteVertrouwenPage() {
             <p className={kickerLicht}>Kies wat bij je past</p>
             <h2 className="text-2xl md:text-3xl font-bold text-wit mb-6 reveal">Rust, Ruimte &amp; Vertrouwen</h2>
             <p className="text-wit/80 leading-relaxed reveal">
-              Bij beide trajecten krijg je persoonlijke sessies en je eigen werkboek. Het verschil
-              zit in de tijd en de diepgang.
+              Na de intake kiezen we samen. Bij beide trajecten krijg je persoonlijke sessies en je
+              eigen werkboek. Het verschil zit in de tijd en de diepgang.
             </p>
           </div>
           <div id="rrv-trajecten-grid" className="grid gap-8 sm:grid-cols-2">
@@ -223,20 +342,28 @@ export default function RustRuimteVertrouwenPage() {
                   {t.punten.map(p => <li key={p}>{p}</li>)}
                 </ul>
                 <p className="text-3xl font-bold text-primair mt-auto mb-5">{t.prijs}</p>
-                <div className="flex flex-wrap items-center gap-4">
-                  <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
-                    className="inline-block bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
-                    Plan een belafspraak →
+                <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+                  className="inline-block text-center bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+                  Begin met een intake →
+                </a>
+                <p className="text-sm text-tekst/60 mt-3 text-center">
+                  Intake al gehad?{' '}
+                  <a href={t.shop} target="_blank" rel="noopener noreferrer" className="font-bold text-primair hover:underline">
+                    Boek hier je traject
                   </a>
-                  <a href={t.shop} target="_blank" rel="noopener noreferrer"
-                    className="font-bold text-primair hover:underline">
-                    Direct boeken
-                  </a>
-                </div>
+                </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Iets voor jou als */}
+      <section className="max-w-3xl mx-auto px-6 pt-20">
+        <h2 className={h2}>Dit traject is iets voor jou als</h2>
+        <ul id="rrv-voorjou-lijst" className="grid gap-2 list-disc pl-5 text-tekst/80 leading-relaxed">
+          {voorJouAls.map(item => <li key={item}>{item}</li>)}
+        </ul>
       </section>
 
       {/* Het werkboek */}
@@ -255,8 +382,23 @@ export default function RustRuimteVertrouwenPage() {
         </div>
       </section>
 
+      {/* Begin klein */}
+      <section className="bg-titelkleur/30 border-y border-primair/10">
+        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+          <h2 className="text-xl font-bold text-primair mb-3 reveal">Begin klein, vandaag nog</h2>
+          <p className="text-tekst/80 leading-relaxed reveal">
+            Zet 10 minuten apart voor jezelf. Geen telefoon, geen lijst. Ga zitten, adem rustig
+            door je neus en vraag je af: wat voel ik nu? Niet om het op te lossen, gewoon om het
+            te merken.
+          </p>
+          <p className="text-tekst/80 leading-relaxed mt-4 reveal">
+            Wil je weten waar jij nu staat? Doe hieronder de gratis energiescan.
+          </p>
+        </div>
+      </section>
+
       {/* Energiescan */}
-      <section id="energiescan" className="border-t border-primair/10 scroll-mt-6">
+      <section id="energiescan" className="scroll-mt-6">
         <div className="max-w-2xl mx-auto px-6 py-20">
           <div className="rounded-2xl overflow-hidden shadow-sm border border-primair/10 reveal">
             <Energiescan />
@@ -304,6 +446,14 @@ export default function RustRuimteVertrouwenPage() {
               </blockquote>
             ))}
           </div>
+          <div id="rrv-kort-grid" className="grid gap-6 sm:grid-cols-2 mt-6">
+            {korteErvaringen.map((quote, i) => (
+              <blockquote key={i}
+                className="bg-wit rounded-2xl p-6 border border-primair/10 text-tekst/80 italic leading-relaxed">
+                &ldquo;{quote}&rdquo;
+              </blockquote>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -334,18 +484,25 @@ export default function RustRuimteVertrouwenPage() {
             Je hoeft het niet alleen te doen. We beginnen gewoon.
           </h2>
           <p className="text-wit/80 leading-relaxed mb-8 reveal">
-            In een gratis telefonisch overleg van 15 minuten kijken we samen wat jij nodig hebt.
+            Weet je dat je aan jezelf wilt werken? Plan dan een intake. Twijfel je nog? In een
+            gratis telefonisch overleg van 15 minuten kijken we samen wat jij nodig hebt.
             Vrijblijvend.
           </p>
-          <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer" className="hero-btn mt-0! reveal">
-            Plan een gratis belafspraak →
-          </a>
+          <div className="flex flex-wrap justify-center gap-4 reveal">
+            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer" className="hero-btn mt-0!">
+              Plan een intake →
+            </a>
+            <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-block border-2 border-titelkleur text-titelkleur font-semibold px-8 py-3 rounded-full hover:bg-titelkleur/10 transition-colors">
+              Gratis belafspraak (15 min)
+            </a>
+          </div>
         </div>
       </section>
 
       <ScrollReveal
         singles={['.reveal']}
-        grids={['#rrv-herken-lijst', '#rrv-werkwijze-grid', '#rrv-trajecten-grid', '#rrv-ervaringen-grid']}
+        grids={['#rrv-herken-lijst', '#rrv-werkwijze-grid', '#rrv-stappen-grid', '#rrv-trajecten-grid', '#rrv-voorjou-lijst', '#rrv-ervaringen-grid', '#rrv-kort-grid']}
       />
     </>
   );
