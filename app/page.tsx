@@ -44,6 +44,7 @@ const stappen = [
     titel: 'Intake van 90 minuten',
     tekst: 'Weet je dat je aan jezelf wilt werken? Dan start je met een intake. We staan stil bij jouw verhaal en gaan meteen praktisch aan de slag. Zo voel je direct wat mijn manier van werken voor jou kan betekenen.',
     prijs: '€142,50',
+    prijsUitleg: 'Een volwaardige sessie van 90 minuten, geen verkoopgesprek.',
   },
   {
     nr: '3',
@@ -100,6 +101,7 @@ const trajecten = [
       'Inclusief werkboek, human design reading en olieblend',
     ],
     prijs: '€395',
+    prijsUitleg: 'Voor 3 maanden begeleiding, alles inbegrepen.',
     shop: 'https://praktijkconfident.kennis.shop/pay/basis-instap-traject-rust-ruimte-vertrouwen',
   },
   {
@@ -113,6 +115,7 @@ const trajecten = [
       'Inclusief werkboek, human design reading, olieblend en een cacaoceremonie',
     ],
     prijs: '€695',
+    prijsUitleg: 'Voor 6 maanden begeleiding, alles inbegrepen.',
     shop: 'https://praktijkconfident.kennis.shop/pay/verdiepend-traject-rust-ruimte-vertrouwen',
   },
 ];
@@ -328,6 +331,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-primair mb-2">{st.titel}</h3>
                 <p className="text-tekst/70 leading-relaxed flex-1">{st.tekst}</p>
                 {st.prijs && <p className="text-2xl font-bold text-primair mt-4">{st.prijs}</p>}
+                {st.prijsUitleg && <p className="text-sm text-tekst/60 mt-1">{st.prijsUitleg}</p>}
               </div>
             ))}
           </div>
@@ -364,7 +368,8 @@ export default function HomePage() {
                 <ul className="list-disc pl-5 text-tekst/80 leading-relaxed space-y-1 mb-6">
                   {t.punten.map(p => <li key={p}>{p}</li>)}
                 </ul>
-                <p className="text-3xl font-bold text-primair mt-auto mb-5">{t.prijs}</p>
+                <p className="text-3xl font-bold text-primair mt-auto">{t.prijs}</p>
+                <p className="text-sm text-tekst/60 mb-5">{t.prijsUitleg}</p>
                 <a href={AFSPRAAK_URL} target="_blank" rel="noopener noreferrer"
                   className="inline-block text-center bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
                   Begin met een intake →
