@@ -29,12 +29,12 @@ const aanbod = [
   {
     titel: 'Basis Traject – 3 maanden',
     beschrijving: 'Een eerste traject van 3 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, waarin we samen op zoek gaan naar meer rust, ruimte en vertrouwen in jezelf en je dagelijks leven. Ook geschikt als klachten samenhangen met de overgang (perimenopauze, menopauze of postmenopauze).',
-    url: '/rust-ruimte-vertrouwen',
+    url: '/',
   },
   {
     titel: 'Verdiepend Traject – 6 maanden',
     beschrijving: 'Een verdiepend traject van 6 maanden met NEI-therapie (Neuro Emotionele Integratie) in Oisterwijk, Tilburg en omgeving, voor wie meer tijd en ruimte nodig heeft om patronen te doorbreken en blijvend in balans te komen.',
-    url: '/rust-ruimte-vertrouwen',
+    url: '/',
   },
   {
     titel: 'Online cursus: werken met de biotensor',

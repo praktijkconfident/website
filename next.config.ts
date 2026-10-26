@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/rust-ruimte-vertrouwen',
+        destination: '/',
+        permanent: false,
+      },
+      {
         source: '/startpagina',
         destination: '/',
         permanent: true,
