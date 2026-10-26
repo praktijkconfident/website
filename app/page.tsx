@@ -303,8 +303,8 @@ export default function HomePage() {
             <h2 className={h2}>Praktisch, warm en met beide benen op de grond</h2>
             <p className="text-tekst/80 leading-relaxed reveal">
               De basis van elk traject is NEI-therapie. Daaromheen zet ik andere hulpmiddelen in,
-              als ze jou verder helpen. Jij hoeft niet te weten hoe ze werken. Ik kies wat op dat
-              moment bij jou past.
+              als ze jou verder helpen. Ik leg je altijd uit wat we doen en waarom, en samen kijken we
+              wat op dat moment bij jou past.
             </p>
           </div>
           <div className="bg-primair text-wit rounded-2xl p-8 md:p-10 mb-6 reveal">
