@@ -3,6 +3,7 @@ import Energiescan from '@/components/Energiescan';
 import ScrollReveal from '@/components/ScrollReveal';
 import NieuwsbriefForm from '@/components/NieuwsbriefForm';
 import MenopauzeBanner from '@/components/MenopauzeBanner';
+import AdventBanner from '@/components/AdventBanner';
 import EbookPopup from '@/components/EbookPopup';
 
 export const metadata: Metadata = {
@@ -194,6 +195,7 @@ export default function HomePage() {
   return (
     <>
       <MenopauzeBanner />
+      <AdventBanner />
       <EbookPopup />
 
       {/* Opening */}

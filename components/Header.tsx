@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { adventFase } from '@/components/AdventBanner';
 import Link from 'next/link';
 
 // ← Vul hier jouw Kennis Shop URL in (bijv. 'https://jouwbedrijf.kennis.shop')
@@ -16,6 +17,16 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [toonAdvent, setToonAdvent] = useState(false);
+
+  // Menu-item "Adventkalender" is alleen zichtbaar t/m 24 december 2026.
+  useEffect(() => {
+    setToonAdvent(adventFase(new Date()) !== null);
+  }, []);
+
+  const links = toonAdvent
+    ? [...navLinks.slice(0, 4), { href: '/adventkalender', label: 'Adventkalender' }, ...navLinks.slice(4)]
+    : navLinks;
 
   return (
     <header className="bg-wit border-b border-primair/10 relative">
@@ -29,7 +40,7 @@ export default function Header() {
 
         {/* Navigatie — desktop */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {navLinks.map(link => (
+          {links.map(link => (
             <Link key={link.href} href={link.href}
               className="text-tekst hover:text-primair transition-colors">
               {link.label}
@@ -56,7 +67,7 @@ export default function Header() {
       {/* Navigatie — mobiel dropdown */}
       {open && (
         <nav className="md:hidden border-t border-primair/10 bg-wit px-6 py-5 flex flex-col gap-5 text-sm font-medium">
-          {navLinks.map(link => (
+          {links.map(link => (
             <Link key={link.href} href={link.href}
               className="text-tekst hover:text-primair transition-colors"
               onClick={() => setOpen(false)}>
