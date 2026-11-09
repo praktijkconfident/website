@@ -121,6 +121,16 @@ const trajecten = [
 const ervaringen = [
   {
     tekst: [
+      'De NEI-sessie die ik van Sandra kreeg voelde als een ontspannen feestje. Het begon al toen ik binnenkwam in haar werkruimte: wat een harmonieuze sfeer, mooie afgestemde kleuren en een lekker geurtje.',
+      'Sandra legde rustig uit wat NEI-therapie is en wat ze ging doen. Ze liet me de biotensor zien waarmee de spanningen in mijn lichaam en de disbalans gemeten konden worden. Ze testte aan de hand van uitgebreide lijsten, waarmee ze een soort “beslisboom” maakte, althans zo kwam het op mij over.',
+      'Daarna werd de energie uitgebalanceerd. Wonderlijk dat die biotensor zo duidelijk met bewegingen aangeeft wat er speelt en opgelost wordt. Ik voelde trillingen in mijn lijf tijdens de behandeling, voor mij herkenbaar als energie die “aan het werk is”. Zelf hoefde ik niets te doen en dat is heel prettig. Ik voelde me heel vertrouwd bij Sandra.',
+      'Tot slot mocht ik een kaart trekken. De kaart Blijdschap kwam tevoorschijn. Precies zoals ik me voelde, en wat past in mijn ontwikkeling!',
+      'Na deze fijne positieve ervaring ging ik heel blij naar huis. En die blijheid kan ik nog steeds voelen. Dank je wel Sandra.',
+    ],
+    naam: 'Joy Schijf, Tilburg',
+  },
+  {
+    tekst: [
       'Lieve Sandra,',
       'Bedankt als eerst voor je flexibiliteit, toen de afspraak helaas verzet moest worden wegens ziekte. Wat fijn dat je begripvol ook was.',
       'Meteen bij binnenkomst voelde ik je warmte en voelde ik me thuis/veilig en op mijn gemak. Je nam de tijd en legde andere dingen, waar interesse in was uit. De sessie voelde erg positief en we kwamen bij lagen uit die ik herkende. De sessie was ook pittig, maar ik merkte verschuiving en na de sessie ontspanning. Wat ook het doel was.',
