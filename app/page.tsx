@@ -127,7 +127,7 @@ const ervaringen = [
       'Tot slot mocht ik een kaart trekken. De kaart Blijdschap kwam tevoorschijn. Precies zoals ik me voelde, en wat past in mijn ontwikkeling!',
       'Na deze fijne positieve ervaring ging ik heel blij naar huis. En die blijheid kan ik nog steeds voelen. Dank je wel Sandra.',
     ],
-    naam: 'Joy Schijf, Tilburg',
+    naam: 'Joy S., Tilburg',
   },
   {
     tekst: [
