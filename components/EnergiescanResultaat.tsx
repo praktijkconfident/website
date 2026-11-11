@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import { GEBIEDEN, TIPS, bepaalProfiel } from "@/lib/energiescan";
+import { downloadEnergiescanPdf } from "@/lib/energiescanPdf";
 
 export default function EnergiescanResultaat({ scores }: { scores: number[] }) {
   const gemiddelde = scores.reduce((a, b) => a + b, 0) / scores.length;
@@ -6,6 +10,16 @@ export default function EnergiescanResultaat({ scores }: { scores: number[] }) {
   const lageGebieden = GEBIEDEN.map((naam, i) => ({ naam, score: scores[i] }))
     .filter((g) => g.score < 8)
     .sort((a, b) => a.score - b.score);
+  const [bezig, setBezig] = useState(false);
+
+  const downloadPdf = async () => {
+    setBezig(true);
+    try {
+      await downloadEnergiescanPdf(scores);
+    } finally {
+      setBezig(false);
+    }
+  };
 
   return (
     <div style={{ maxWidth: 560, margin: "0 auto", padding: "2rem 1.5rem 3rem", fontFamily: "Inter, sans-serif", color: "#2a2a2a" }}>
@@ -13,6 +27,7 @@ export default function EnergiescanResultaat({ scores }: { scores: number[] }) {
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
         .es-cta-primair:hover { background: #3d6b55 !important; }
         .es-dienst-link:hover { background: #d4e8da !important; }
+        .es-pdf-knop:hover { background: #e8f0eb !important; }
       `}</style>
 
       <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7a9a88", marginBottom: "0.5rem", textAlign: "center" }}>
@@ -31,6 +46,22 @@ export default function EnergiescanResultaat({ scores }: { scores: number[] }) {
           Gemiddelde score: {gemiddelde.toFixed(1)}
         </div>
       </div>
+
+      {/* PDF downloaden */}
+      <button
+        type="button"
+        className="es-pdf-knop"
+        onClick={downloadPdf}
+        disabled={bezig}
+        style={{
+          display: "block", width: "100%", marginTop: "1rem", background: "white", color: "#3d6b55",
+          border: "1.5px solid #5c8a72", borderRadius: 50, padding: "0.8rem 1.5rem",
+          fontSize: "0.92rem", fontFamily: "Inter, sans-serif", fontWeight: 500,
+          cursor: bezig ? "wait" : "pointer", transition: "background 0.2s",
+        }}
+      >
+        {bezig ? "PDF wordt gemaakt..." : "↓ Download je uitslag als PDF"}
+      </button>
 
       {/* Tips */}
       <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.3rem", fontWeight: 500, color: "#3d6b55", margin: "1.75rem 0 1rem" }}>
